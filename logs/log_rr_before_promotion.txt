@@ -1,0 +1,43 @@
+mahesh@Maheshs-MacBook-Pro AWS % ssh -i "Udacity_Secondary.pem" ec2-user@ec2-54-67-75-39.us-west-1.compute.amazonaws.com
+
+[ec2-user@ip-10-2-10-152 ~]$ sudo yum install mysql
+
+[ec2-user@ip-10-2-10-152 ~]$ mysql -u admin -p -P 3306 -h database-readreplica.ctwhlarg2ozh.us-west-1.rds.amazonaws.com
+
+MySQL [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| innodb             |
+| mysql              |
+| performance_schema |
+| sys                |
+| udacity            |
++--------------------+
+6 rows in set (0.00 sec)
+
+MySQL [udacity]> use udacity;
+Database changed
+MySQL [udacity]> show tables;
++-------------------+
+| Tables_in_udacity |
++-------------------+
+| person            |
++-------------------+
+1 row in set (0.00 sec)
+
+MySQL [udacity]> INSERT INTO person values("Person3","President",45,'M');
+ERROR 1290 (HY000): The MySQL server is running with the --read-only option so it cannot execute this statement
+MySQL [udacity]> select * from person;
++---------+-----------+------+------+
+| name    | owner     | age  | sex  |
++---------+-----------+------+------+
+| Person1 | Owner     |   25 | M    |
+| Person2 | Worker    |   22 | F    |
+| Person3 | President |   45 | M    |
+| Person4 | Nurse     |   35 | F    |
++---------+-----------+------+------+
+4 rows in set (0.00 sec)
+
+MySQL [udacity]> 
