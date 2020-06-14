@@ -1,0 +1,14 @@
+We would be backing up the data every 30 mins and the read replica is available in a different region. 
+
+Minimum RTO for a single AZ outage
+The Minimum RTO for a single AZ outage would be 30 mins 
+
+Minimum RTO for a single region outage
+The Minimum RTO for a single region outage would be 1 hour 
+
+Minimum RPO for a single AZ outage
+The Minimum RPO for a single AZ outage would be 30 min.
+
+
+Minimum RPO for a single region outage
+The Minimum RPO for a single region outage would be 1 hour 
