@@ -1,11 +1,16 @@
 Minimum RTO for a single AZ outage
-The Minimum RTO for a single AZ outage would be 5 mins which is the AWS default for an AZ failure as a standby instance is ready to take over in an MultiAX deployment.
+Time for AWS to know that a failure has occured - 15 min. 
+Time to route trafic to the backup - 30 mins
+The Minimum RTO for a single AZ outage would be 45 mins which is the AWS default for an AZ failure as a standby instance is ready to take over in an MultiAZ deployment and the backup is allowed to start.
 
 Minimum RTO for a single region outage
+
 The Minimum RTO for a single region outage would be 2 hour as we have to promote the read replica in another region. Also the time to connect the applications to the new Region.
 
 Minimum RPO for a single AZ outage
-The Minimum RPO for a single AZ outage would be 5 min as the data is being replicated in real time.
+Time for AWS to know that a failure has occured - 15 min. 
+Time to route trafic to the backup - 30 mins
+The Minimum RPO for a single AZ outage would be 45 min which is the AWS default for an AZ failure as we have the backup data available to be restored. 
 
 Minimum RPO for a single region outage
 The Minimum RPO for a single region outage would be 2 hour as we need to promote the DB and have the data restored to the most recent backup. And out DB's are backed up every 1 hour. 
