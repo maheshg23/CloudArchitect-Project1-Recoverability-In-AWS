@@ -1,5 +1,6 @@
 
 # AWS Cloud Architect NanoDegree
+
 ## Project 1 Recoverability In AWS
 Design for availability resilience reliability replacement project
 
@@ -150,5 +151,3 @@ You will now need to “recover” the object:
 2. Refresh web page
 
 **SAVE** a screenshot of the modified webpage. Name your screenshot "s3_delete_revert.png"
-
-#### License
